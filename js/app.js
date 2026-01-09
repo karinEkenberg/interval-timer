@@ -1,42 +1,28 @@
 const btn = document.getElementById("timer-btn");
 const text = document.getElementById("timer-text");
 
-let phase = 0; 
-let timeLeft = 5;
+let interval;
+let counter = 1;
+let isActive = false;
+let mode = "exercise" | "relax" | "final";
 
 function startExercise() {
-  updateUI();
-  const interval = setInterval(() => {
-    timeLeft--;
-    text.innerText = timeLeft;
-
-    if (timeLeft <= 0) {
-      nextPhase();
-    }
-  }, 1000);
-}
-
-function nextPhase() {
-  phase++;
-
-  if (phase === 1) {
-    timeLeft = 5;
-    btn.className = "hard-contract";
-    text.innerText = "SQUEEZE HARD";
-  } else if (phase === 2) {
-    timeLeft = 30;
-    btn.className = "light-contract";
-    text.innerText = "LIGHT SQUEEZE";
-  } else {
+  if (isActive) {
     clearInterval(interval);
+    isActive = false;
+    btn.textContent = "Start Exercise";
     btn.className = "relax";
-    text.innerText = "DONE";
+    text.textContent = "Exercise paused.";
+  } else {
+    isActive = true;
+    btn.textContent = "Pause Exercise";
+    btn.className = "hard-contract";
+    text.textContent = `Exercise started. Count: ${counter}`;
+    interval = setInterval(() => {
+      counter++;
+      text.textContent = `Exercise started. Count: ${counter}`;
+    }, 1000);
   }
 }
 
-function updateUI() {
-  btn.className = "relax";
-  text.innerText = "RELAX";
-}
-
-btn.addEventListener("click", startExercise, { once: true });
+btn.addEventListener("click", startExercise);
