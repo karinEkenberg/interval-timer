@@ -12,12 +12,15 @@ body {
 
 #timer-btn {
   font-size: 5rem;
-  margin: 20px 0;
+  width: 90%;
+  margin: 0;
   height: 50vh;
 }
 
 #timer-text {
   font-size: 3rem;
+  text-align: center;
+  padding-top: 40px;
 }
 
 .relax {

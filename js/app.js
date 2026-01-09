@@ -1,7 +1,7 @@
 const btn = document.getElementById("timer-btn");
 const text = document.getElementById("timer-text");
 
-let phase = 0; // 0 = Relax, 1 = Hard, 2 = Light (30s)
+let phase = 0; 
 let timeLeft = 5;
 
 function startExercise() {
@@ -20,17 +20,14 @@ function nextPhase() {
   phase++;
 
   if (phase === 1) {
-    // Från Relax till Knip hårt
     timeLeft = 5;
     btn.className = "hard-contract";
     text.innerText = "SQUEEZE HARD";
   } else if (phase === 2) {
-    // Slutklämmen: Knip lätt i 30 sekunder
     timeLeft = 30;
     btn.className = "light-contract";
     text.innerText = "LIGHT SQUEEZE";
   } else {
-    // Klar!
     clearInterval(interval);
     btn.className = "relax";
     text.innerText = "DONE";
