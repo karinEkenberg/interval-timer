@@ -48,7 +48,7 @@ function startExercise() {
         mode = "final";
         seconds = 0;
         btn.className = "light-contract";
-        text.textContent = "SISTA!";
+        text.textContent = "LAST ONE!";
       }
     } else if (mode === "final" && seconds >= 30) {
       // Helt klar
