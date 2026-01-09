@@ -10,8 +10,28 @@ body {
   justify-content: center;
 }
 
-#timer {
+#timer-btn {
   font-size: 5rem;
   margin: 20px 0;
-  background-color: rgb(13, 112, 79);
+  height: 50vh;
+}
+
+#timer-text {
+  font-size: 3rem;
+}
+
+.relax {
+  background-color: #1b5e20;
+  border-color: #2e7d32;
+}
+
+.hard-contract {
+  background-color: #e65100;
+  border-color: #ff9800;
+}
+
+.light-contract {
+  background-color: #fbc02d;
+  border-color: #fff176;
+  color: #000;
 }
