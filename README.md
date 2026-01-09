@@ -20,3 +20,5 @@
 
 # &nbsp;   No data tracking.
 
+Link to the app https://karinekenberg.github.io/interval-timer/
+
