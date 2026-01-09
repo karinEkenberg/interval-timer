@@ -4,10 +4,7 @@ body {
 }
 
 #app {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
 }
 
 #timer-btn {
@@ -28,13 +25,25 @@ body {
   border-color: #2e7d32;
 }
 
+#timer-btn {
+  width: 80vw;
+  height: 50vh;
+  border-radius: 30px;
+  border: 6px solid #333;
+  cursor: pointer;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: white;
+  transition: all 0.3s ease;
+  appearance: none;
+}
+
 .hard-contract {
   background-color: #e65100;
   border-color: #ff9800;
-}
-
+} 
 .light-contract {
   background-color: #fbc02d;
   border-color: #fff176;
   color: #000;
-}
+} 
