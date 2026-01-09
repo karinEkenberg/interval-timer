@@ -1,0 +1,11 @@
+# OS Metadata
+.DS_Store
+Thumbs.db
+
+# IDE/Editor folders
+.vscode/
+.idea/
+
+# Personal notes (om du skapar filer för privata anteckningar)
+notes.txt
+*.log
