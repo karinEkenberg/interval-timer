@@ -41,9 +41,14 @@ body {
 .hard-contract {
   background-color: #e65100;
   border-color: #ff9800;
-} 
+}
 .light-contract {
   background-color: #fbc02d;
   border-color: #fff176;
   color: #000;
-} 
+}
+
+#ecograder {
+  color: #cbe995;
+  text-decoration: underline;
+}

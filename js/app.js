@@ -26,7 +26,7 @@ function startExercise() {
   isActive = true;
   mode = "hard";
   btn.className = "hard-contract";
-  text.textContent = `${counter}/10`;
+  text.textContent = `${counter}`;
 
   interval = setInterval(() => {
     seconds++;
@@ -35,7 +35,7 @@ function startExercise() {
       mode = "relax";
       seconds = 0;
       btn.className = "relax";
-      text.textContent = `${counter}/10`;
+      text.textContent = `${counter}`;
     } else if (mode === "relax" && seconds >= 10) {
       if (counter < 10) {
         // Nästa knip
