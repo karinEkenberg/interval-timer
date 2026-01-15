@@ -46,6 +46,7 @@ body {
   background-color: #fbc02d;
   border-color: #fff176;
   color: #000;
+  -webkit-text-stroke: 1px black;
 }
 
 #ecograder {
